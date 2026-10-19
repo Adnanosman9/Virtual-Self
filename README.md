@@ -1,6 +1,6 @@
 # Virtual Dance Partner
 
-An interactive Python script that uses webcam to create a mirrored skeleton of your movements. It uses Google's MediaPipe Pose detection to track your body and projects a delayed shadow next to you.
+An interactive Python script that uses webcam to create a mirrored skeleton of your movements. It uses Google's MediaPipe Pose detection to track your body and projects a mirrored shadow next to you.
 
 ## Features
 * **Pose Tracking:** Uses the MediaPipe Tasks Vision API for body landmark detection.
