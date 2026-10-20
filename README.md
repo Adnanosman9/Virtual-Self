@@ -1,24 +1,40 @@
-# Virtual Dance Partner
+# virtual-dance-partner
 
-An interactive Python script that uses webcam to create a mirrored skeleton of your movements. It uses Google's MediaPipe Pose detection to track your body and projects a mirrored shadow next to you.
+This is a python script that makes clone skeleton version of yourself beside you that repeats your movement. MediaPipe api is used to track your body movement and repeat it. 
 
-## Features
-* **Pose Tracking:** Uses the MediaPipe Tasks Vision API for body landmark detection.
-* **Delayed "Shadow":** Buffers your previous movements to project a mirrored version of yourself on the screen.
-* **Auto-Downloading Model:** Automatically fetches the required `pose_landmarker_heavy.task` model file on the first run so you don't have to download it manually.
+## 🎥 Quick Demo of It Working
 
-## Prerequisites
+<img width="1111" height="311" alt="Screenshot 2026-10-20 035233" src="https://github.com/user-attachments/assets/f2773c80-85ce-4c97-9ec6-1660188704d1" />
 
-You need Python 3.7 or newer installed. You will also need to install the following Python libraries:
+<img width="408" height="240" alt="1020 (2)" src="https://github.com/user-attachments/assets/d39a2b56-dc7a-408b-9e72-2bb1f543f3f7" />
 
-* `opencv-python` (cv2)
-* `mediapipe`
-* `numpy`
+## How to Run It
 
-## Installation
+If you just want to run the code directly, follow these quick steps:
 
-1. Clone or download this repository/script to your local machine or install the exe file from the release section. 
-2. Install the required dependencies using pip:
+1. Head over to my [Latest Release](https://github.com/Adnanosman9/Virtual-Self/releases/tag/V1) page and download the compiled `.exe` file.
+2. You have ti be connected with internet to run it the first time. The program will automatically download the machine learning model file (`pose_landmarker_heavy.task`) right into your project folder.
+3. If you want to run the Python script instead, install the requirements manually:
+   ```bash
+   pip install opencv-python mediapipe numpy
+   ```
+4. Then just boot up the script file:
+   ```bash
+   python virtual_self.py
 
-```bash
-pip install opencv-python mediapipe numpy
+   ```
+
+
+## The Problems I Hit during the development
+
+I used OpenCV to hook into the webcam hardware and pull widescreen video frames. To handle the skeleton lines, I integrated Google's MediaPipe Pose Landmarker which tracks 33 different joints on your body in real-time.
+
+Installing third-party libraries every time is a time waste, so I set up a function that uses Python's built-in `urllib.request` and downloads the required ML model file automatic. 
+
+
+## Troubleshooting
+* If the lines aren't tracking your arms or legs, step further back from your camera. MediaPipe needs to see your upper torso clearly to map out your shoulder and hip joints.
+* Close down other active apps that might be hogging your video feed like Discord, Zoom, or open browser tabs.
+* **Also check if the code is trying to connect to your other connected devices.**
+
+License: MIT
