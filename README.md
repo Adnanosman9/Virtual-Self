@@ -27,7 +27,7 @@ If you just want to run the code directly, follow these quick steps:
 
 ## The Problems I had during development
 
-I used OpenCV to hook into the webcam hardware and pull widescreen video frames. To handle the skeleton lines, I integrated Google's MediaPipe Pose Landmarker which tracks 33 different joints on your body in real-time.
+I used OpenCV to hook into the webcam hardware and pull widescreen video frames. To handle the skeleton lines, I integrated Google's MediaPipe Pose Landmarker which tracks different joints on your body.
 
 Installing third-party libraries every time is a time waste, so I set up a function that uses Python's built-in `urllib.request` and downloads the required ML model file automatic. 
 
