@@ -1,4 +1,4 @@
-# virtual-dance-partner
+# virtual partner
 
 This is a python script that makes clone skeleton version of yourself beside you that repeats your movement. MediaPipe api is used to track your body movement and repeat it. 
 
