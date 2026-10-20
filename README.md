@@ -12,8 +12,8 @@ This is a python script that makes clone skeleton version of yourself beside you
 
 If you just want to run the code directly, follow these quick steps:
 
-1. Head over to my [Latest Release](https://github.com/Adnanosman9/Virtual-Self/releases/tag/V1) page and download the compiled `.exe` file.
-2. You have ti be connected with internet to run it the first time. The program will automatically download the machine learning model file (`pose_landmarker_heavy.task`) right into your project folder.
+1. GO to my [Latest Release](https://github.com/Adnanosman9/Virtual-Self/releases/tag/V1) page and download the compiled `.exe` file.
+2. You have to be connected with internet to run it the first time. The program will automatically download the machine learning model file (`pose_landmarker_heavy.task`) right into your project folder.
 3. If you want to run the Python script instead, install the requirements manually:
    ```bash
    pip install opencv-python mediapipe numpy
@@ -25,7 +25,7 @@ If you just want to run the code directly, follow these quick steps:
    ```
 
 
-## The Problems I Hit during the development
+## The Problems I had during development
 
 I used OpenCV to hook into the webcam hardware and pull widescreen video frames. To handle the skeleton lines, I integrated Google's MediaPipe Pose Landmarker which tracks 33 different joints on your body in real-time.
 
