@@ -29,14 +29,15 @@ If you just want to run the code directly, follow these quick steps:
 
 ## Debugging journey
 
-To track the body and make the skeleton, needs a skeleton connection. In Google's [Documentation](https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker#pose_landmarker_model), they gave this skeleton
+### To track the body and make the skeleton, needs a skeleton connection. In Google's [Documentation](https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker#pose_landmarker_model), they gave this skeleton
+
 <img width="676" height="724" alt="Screenshot 2026-10-23 184456" src="https://github.com/user-attachments/assets/3a4d0d87-0fe7-4000-979d-3a20feab0d6d" />
 
-Based on this skeleton, I was struggling to produce the proper connection metrics.
+### Based on this skeleton, I was struggling to produce the proper connection metrics.
 
-Another problem was making the `.exe` including `pose_landmarker_heavy.task`. The .exe file was trying to find pose_landmarker in relative path folders. 
+### Another problem was making the `.exe` including `pose_landmarker_heavy.task`. The .exe file was trying to find pose_landmarker in relative path folders. 
 
-These both issues were debugged with assistance of Gemini cause these were totally new problems for me. 
+> ### These both issues were debugged with assistance of Gemini cause these were totally new problems for me. 
 
 
 
