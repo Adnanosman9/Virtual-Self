@@ -4,9 +4,11 @@ This is a python script that makes clone skeleton version of yourself beside you
 
 ## 🎥 Quick Demo of It Working
 
-<img width="1111" height="311" alt="Screenshot 2026-10-20 035233" src="https://github.com/user-attachments/assets/f2773c80-85ce-4c97-9ec6-1660188704d1" />
+<img width="426" height="240" alt="1023" src="https://github.com/user-attachments/assets/d82aa85a-a243-4b34-8501-f7b7569d645c" />
 
-<img width="408" height="240" alt="1020 (2)" src="https://github.com/user-attachments/assets/d39a2b56-dc7a-408b-9e72-2bb1f543f3f7" />
+## Updated features
+* Hand wrists have a glowing trail moving
+* The video will be automatically recorded and saved in the folder
 
 ## How to Run It
 
@@ -25,11 +27,17 @@ If you just want to run the code directly, follow these quick steps:
    ```
 
 
-## The Problems I had during development
+## Debugging journey
 
-I used OpenCV to hook into the webcam hardware and pull widescreen video frames. To handle the skeleton lines, I integrated Google's MediaPipe Pose Landmarker which tracks different joints on your body.
+To track the body and make the skeleton, needs a skeleton connection. In Google's [Documentation](https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker#pose_landmarker_model), they gave this skeleton
+<img width="676" height="724" alt="Screenshot 2026-10-23 184456" src="https://github.com/user-attachments/assets/3a4d0d87-0fe7-4000-979d-3a20feab0d6d" />
 
-Installing third-party libraries every time is a time waste, so I set up a function that uses Python's built-in `urllib.request` and downloads the required ML model file automatic. 
+Based on this skeleton, I was struggling to produce the proper connection metrics.
+
+Another problem was making the `.exe` including `pose_landmarker_heavy.task`. The .exe file was trying to find pose_landmarker in relative path folders. 
+
+These both issues were debugged with assistance of Gemini cause these were totally new problems for me. 
+
 
 
 ## Troubleshooting
