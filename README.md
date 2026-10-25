@@ -26,6 +26,17 @@ If you just want to run the code directly, follow these quick steps:
 
    ```
 
+---
+
+## Environment setup for MAC
+
+Here is an error happens because Python installations on macOS (specifically those downloaded from python.org) do not automatically include SSL root certificates.
+
+### Solve it manually - 
+* Open Finder and go to the Applications folder.
+* Open their Python 3.x folder (e.g., Python 3.10 or 3.11).
+* Double-click the file named Install Certificates.command. A terminal will open, install the certificates, and fix the issue permanently for their machine.
+
 
 ## Debugging journey
 
